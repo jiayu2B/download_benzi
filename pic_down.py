@@ -5,7 +5,7 @@ import urllib.parse
 def getHtml(url):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.62 Safari/537.36'}
-    req = urllib.request.Request(url=url, headers=headers)  # 这里要注意，必须使用url=url，headers=headers的格式，否则回报错，无法连接字符
+    req = urllib.request.Request(url=url, headers=headers) 
 
     page = urllib.request.urlopen(req)
     html = page.read().decode("utf-8")
